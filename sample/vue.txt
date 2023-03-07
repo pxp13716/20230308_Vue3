@@ -1,0 +1,51 @@
+강사
+  신성진
+  pxp13716@gmail.com
+
+GIT
+
+설치
+    npm info @vue/cli
+    npm i -g @vue/cli
+
+설치 버전 확인
+    vue --version
+
+프로젝트 생성
+    vue create [productName]
+
+프로젝트 시작
+    cd productName
+    npm run serve -> package.json 파일 참조
+
+프로젝트 빌드
+    npm run build -> package.json 파일 참조
+
+VUE UI
+  vue ui
+
+
+
+Vue 관련 VSCode plugins
+
+  Live Server
+  JavaScript (ES6) code snippets
+  
+  ESLint
+  Prettier
+
+  Vetur(2,X)
+  Volar(3.X)
+    설치 후 setting.json 파일에 추가
+    "eslint.workingDirectories": [
+      {
+        "mode": "auto"
+      }
+    ],
+  
+  Auto Rename Tag
+  Auto Close Tag
+  Korean(사용법) Language Pack for Visual Studio Code
+  Material Icon Theme
+
+    

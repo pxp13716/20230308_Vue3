@@ -1,0 +1,59 @@
+Babel 작업 설정
+  https://babeljs.io/
+  https://babeljs.io/docs/en/plugins/
+
+  1. package.json 파일 생성
+    npm init -y
+
+  2. babel 모듈 설치 v7
+    1) 공통 모듈
+      npm i -D @babel/core @babel/cli
+
+    2) ES5로 변환 모듈
+      npm i -D @babel/preset-env
+
+  3. babel plugin은 필요에 따라 설치
+    npm i @babel/runtime
+    npm i -D @babel/plugin-transform-arrow-functions
+
+  4. Project 폴더에 Babel 환경 설정 파일 작성
+    1) .babelrc 라는 이름으로 새로운 파일 작성
+    2) 작성한 '.babelrc' 파일에 다음을 기술
+      {
+        "presets": [
+          "@babel/preset-env"
+        ],
+        "plugins": [
+          필요에 따라 등록한다 
+          "@babel/plugin-transform-arrow-functions",
+          ...
+        ]
+      }
+
+  5. 빌드
+      특정 디렉토리 안에 모든 JS 파일을 지정한 폴더에 출력
+        npx => node_modules에 설치된 JavaScript 모듈을 실행하는 경우 사용
+        글로벌에 설치했다면 npx 생략하고 명령 실행
+        
+        npx babel src -d dist
+        npx babel src -d dist --presets @babel/preset-env
+
+      특정 파일만 지정한 폴더에 변환.
+        npx babel src/A16_GeneratorFun.js --out-file dist/A16_GeneratorFun.js
+
+      
+      package.json에 등록하고 사용
+
+      "scripts": {
+          "test": "echo \"Error: no test specified\" && exit 1",
+          "build": "babel src -d dist"
+      },        
+
+
+Webpack 설정
+  설치
+    npm i -D webpack webpack-cli
+
+  설정 파일 작성
+    npx webpack-cli init
+    
